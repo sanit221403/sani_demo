@@ -1,0 +1,97 @@
+@import '../base/all-base.scss';
+@import '../components/all-componands.scss';
+
+
+header{
+    padding: 20px 0;
+    background: #f8f8f8;
+    border-bottom: 1px solid #e7e7e7;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    .container-fluid{        
+        .header_wrapper {     
+            padding: 10px 0px;    
+            @include flex-box;
+            justify-content: space-between;  
+            .header_menu {
+                @include flex-box;
+                ul {
+                    @include flex-box;
+                    li{
+                        margin: 0 10px;
+                        list-style: none;
+                        a{                                                
+                            padding: 0 15px;
+                            font-size: 18px;
+                            line-height: 150%;
+                            color: #000;                           
+                        }
+                    }
+                }
+                .header_contact{
+                    margin-left: 30px;
+                    ul{
+                        li{
+                            margin: 0px;
+                            a{
+                             @include flex-box;
+                             padding: 0 10px;
+                                img{
+                                    max-width: 30px;
+                                    max-height: 25px;
+                                    min-width: 25px;
+                                }
+                            }
+                        }
+                    }
+                } 
+            }            
+        }
+    }
+}
+
+header{
+    button.navbar-toggler {
+    @include flex-box;
+    background: transparent;
+    outline: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    display: none;
+        span.navbar-toggler-icon {
+            background: $white-color;
+            height: 2px;
+            margin: 3px 0;
+            width: 32px;
+            position: relative;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+            transform: translate3d(0, 0px, 0) rotate(0deg);
+        }
+    }
+}
+
+
+body.show_menu {
+    :nth-child(1) {
+        transform: rotate(-45deg);
+        top: 5px;
+    }
+    :nth-child(2) {
+        transform: rotate(45deg);
+        top: -4px;
+    }
+    :nth-child(3) {
+        opacity: 0;
+    }
+}    
+
+
+.header_space {
+    width: 100%;
+    height: 88px;
+    margin-bottom: 60px;
+}
